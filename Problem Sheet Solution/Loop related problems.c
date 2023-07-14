@@ -1,4 +1,3 @@
-// http://lms.uiu.ac.bd/pluginfile.php/119363/mod_resource/content/1/04.%20Loop_related_problems.pdf
 #include <stdio.h>
 #include <math.h>
 // 1
@@ -16,7 +15,6 @@
 //      }
 //      return 0;
 //  }
-
 // 11
 // 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 
@@ -89,18 +87,18 @@
 //     }
 //     else
 //     {
-//         while (inputx >= inputy)
+//         while (inputx > inputy)
 //         {
-//             printf("%d ", inputx * inputx);
+//             printf("%d, ", inputx * inputx);
 //             inputx--;
 //             if (inputx == inputy)
 //             {
 //                 printf("Reached \n");
 //             }
 //         }
-//         while (inputy >= inputx)
+//         while (inputy > inputx)
 //         {
-//             printf("%d ", inputx * inputx);
+//             printf("%d, ", inputx * inputx);
 //             inputx++;
 //             if (inputx == inputy)
 //             {
@@ -112,8 +110,9 @@
 //     return 0;
 // }
 
-// 10 15
-// 100 121 144 169 196 Reached
+// 5
+// 10
+// 25, 36, 49, 64, 81, Reached 
 
 // 6
 
@@ -209,42 +208,6 @@
 //  43654
 
 // 10
-// int main()
-// {
-//     int input, sum = 0, n = 1;
-//     puts("Enter the number:");
-//     scanf("%d", &input);
-//     for (int i = 1; i <= input; i++)
-//     {
-//         {
-
-//             if (i % 2 != 0)
-//             {
-//                 n = i;
-//                 printf("%d ", n);
-//                 if (i > 0 && i < input)
-//                 {
-//                     printf(",");
-//                 }
-//             }
-
-//             else
-//             {
-//                 n = (-1) * i;
-//                 printf("%d ", n);
-//                 if (i > 1 && i < input)
-//                 {
-//                     printf(",");
-//                 }
-//             }
-//         }
-
-//         sum += n;
-//     }
-
-//     printf("= %d\n", sum);
-//     return 0;
-// }
 
 // int main()
 // {
@@ -254,7 +217,6 @@
 //     for (int i = 1; i <= input; i++)
 //     {
 //         {
-
 //             if (i % 2 != 0)
 //             {
 //                 n = i;
@@ -275,7 +237,7 @@
 //         sum += n;
 //     }
 
-//     printf("\nSUM = %d\n", sum);
+//     printf("\nResult: %d\n", sum);
 //     return 0;
 // }
 // Enter the number:
@@ -362,26 +324,6 @@
 // 5
 // 5!= 5 X 4 X 3 X 2 X 1 = 120
 
-// 9
-
-// int main()
-// {
-//     int input, n = 0, sum = 0;
-//     puts("How many Student:");
-//     scanf("%d", &input);
-//     for (int i = 1; i <= input; i++)
-//     {
-//         for (int j = 1; j <= 5; j++)
-//         {
-//             scanf("%d", &n);
-//             sum += n;
-//         }
-//         printf("Student %d: %d\n", i, sum);
-//         sum = 0;
-//     }
-//     return 0;
-// }
-
 // 14
 // int main()
 // {
@@ -415,7 +357,6 @@
 // 120
 
 // 15
-
 // int main()
 // {
 //     int x, y, exponent = 1;
@@ -442,6 +383,5 @@
 // Value of 5 to the power 2:
 // 25
 
-//16
 
 
