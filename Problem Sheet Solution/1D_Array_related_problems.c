@@ -283,26 +283,26 @@ int main()
 // Array B: 7 8 1 3 2 6 4 3
 
 // 11
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int array[n];
-    for (int i = 0; i < n; i++)
-    {
-        array[i] = 0;
-        scanf("%d", &array[i]);
-        if (array[i] % 3 == 0)
-        {
-            array[i] = -1;
-        }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d ", array[i]);
-    }
-    return 0;
-}
+// int main()
+// {
+//     int n;
+//     scanf("%d", &n);
+//     int array[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         array[i] = 0;
+//         scanf("%d", &array[i]);
+//         if (array[i] % 3 == 0)
+//         {
+//             array[i] = -1;
+//         }
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d ", array[i]);
+//     }
+//     return 0;
+// }
 // 8
 // 7 8 1 3 2 6 4 3
 // 7 8 1 -1 2 -1 4 -1
