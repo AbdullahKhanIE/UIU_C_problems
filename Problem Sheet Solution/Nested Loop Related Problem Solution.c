@@ -136,16 +136,15 @@ void main()
     }
 }
 
-Enter a Number :
-    // 4
-    // 1
-    // 1 2
-    // 1 2 3
-    // 1 2 3 4
+// Enter a Number :
+//  4
+//  1
+//  1 2
+//  1 2 3
+//  1 2 3 4
 
-    // 7
-    void
-    main()
+// 7
+void main()
 {
     int input;
     puts("Enter a Number:");
@@ -160,16 +159,15 @@ Enter a Number :
     }
 }
 
-Enter a Number :
-    // 4
-    // ****
-    // ****
-    // ****
-    // ****
+// Enter a Number :
+//  4
+//  ****
+//  ****
+//  ****
+//  ****
 
-    // 8
-    void
-    main()
+// 8
+void main()
 {
     int input;
     puts("Enter a Number:");
@@ -260,17 +258,16 @@ void main()
         puts("");
     }
 }
-Enter a Number :
-    // 5
-    // ____*
-    // ___***
-    // __*****
-    // _*******
-    // *********
+// Enter a Number :
+//  5
+//  ____*
+//  ___***
+//  __*****
+//  _*******
+//  *********
 
-    // 12
-    void
-    main()
+// 12
+void main()
 {
     int row, column, input;
     puts("Enter a Number:");
@@ -320,7 +317,8 @@ Enter a Number :
 //  ___***
 //  ____*
 
-13 int main()
+// 13
+int main()
 {
     int row, column, input, k;
     scanf("%d", &input);

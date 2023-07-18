@@ -18,6 +18,7 @@ int main()
     printf("\n");
     return 0;
 }
+
 //  5
 //  1 2 3 4 5
 //  5  4  3  2  1
@@ -36,6 +37,7 @@ int main()
     printf("Sum: %d\n", sum);
     return 0;
 }
+
 //  5
 //  1 2 3 4 5
 //  Sum: 15
@@ -57,6 +59,7 @@ int main()
     printf("Sum: %d\n", sum);
     return 0;
 }
+
 // 5
 // 1 2 3 4 5
 // Sum: 6
@@ -78,6 +81,7 @@ int main()
     printf("Sum: %d\n", sum);
     return 0;
 }
+
 // 5
 // 1 2 3 4 5
 // Sum: 9
@@ -133,6 +137,7 @@ int main()
     puts("");
     return 0;
 }
+
 // 6
 // 2 8 3 9 0 1
 // Max: 9, Index: 4
@@ -155,6 +160,7 @@ int main()
     printf("Count: %d\n", count);
     return 0;
 }
+
 //  29
 //  UNITEDINTERNATIONALUNIVERSITY
 //  Count: 13
@@ -283,30 +289,29 @@ int main()
 // Array B: 7 8 1 3 2 6 4 3
 
 // 11
-// int main()
-// {
-//     int n;
-//     scanf("%d", &n);
-//     int array[n];
-//     for (int i = 0; i < n; i++)
-//     {
-//         array[i] = 0;
-//         scanf("%d", &array[i]);
-//         if (array[i] % 3 == 0)
-//         {
-//             array[i] = -1;
-//         }
-//     }
-//     for (int i = 0; i < n; i++)
-//     {
-//         printf("%d ", array[i]);
-//     }
-//     return 0;
-// }
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int array[n];
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = 0;
+        scanf("%d", &array[i]);
+        if (array[i] % 3 == 0)
+        {
+            array[i] = -1;
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    return 0;
+}
+
 // 8
 // 7 8 1 3 2 6 4 3
 // 7 8 1 -1 2 -1 4 -1
 
-//12
-
-
+// //12
