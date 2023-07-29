@@ -13,7 +13,7 @@ int main()
             {
                 if ((row >= input / 2 + 1 && column == input / 2 + 1) || (row <= input / 2 + 1 && row == column) || (row <= (input / 2) + 1 && row + column == input + 1))
                 {
-                    printf("* ");
+                    printf("Y ");
                 }
                 else
                 {
@@ -29,3 +29,10 @@ int main()
     }
     return 0;
 }
+
+// Enter The Number of Row: 
+// 5
+// Y       Y 
+//   Y   Y
+//     Y
+//     Y     
