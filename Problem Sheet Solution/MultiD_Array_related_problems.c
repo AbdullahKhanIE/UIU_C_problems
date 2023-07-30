@@ -558,8 +558,8 @@ int main()
 
 // 3
 // 1 7 3
-//7 4 5
-//3 5 6
+// 7 4 5
+// 3 5 6
 // YES
 
 // 2
@@ -567,10 +567,56 @@ int main()
 // 4 2
 // NO
 
+//14
+int main()
+{
 
-// 14
-//dont know.
+    int row, col, i, j, k, l;
+    scanf("%d", &row);
+    scanf("%d", &col);
+    int arr[row][col];
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
 
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            for (k = i; k < row; k++)
+            {
+                for (l = (k == i ? j + 1 : 0); l < col; l++)
+                {
+                    if (arr[i][j] == arr[k][l])
+                    {
+                        arr[k][l] = -1;
+                    }
+                }
+            }
+        }
+    }
+    for (i = 0; i < row; i++)
+    {
+        for (j = 0; j < col; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+// 3 3
+// 1 1 1 
+// 1 1 1 
+// 1 1 1
+
+//  1 -1 -1  
+// -1 -1 -1 
+// -1 -1 -1 
 
 // 15
 int main()
@@ -590,7 +636,7 @@ int main()
     return 0;
 }
 
-// 3 3 
+// 3 3
 // 1 7 3
 // 7 4 5
 // 3 5 6
