@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -11,9 +11,9 @@ int main()
         {
             for (column = 1; column <= input; column++)
             {
-                if (row == 1 || row ==input || row+column==input+1)
+                if (column == input / 2 + 1 || (row == 1) || (row == input))
                 {
-                    printf("Z ");
+                    printf("I ");
                 }
                 else
                 {
@@ -32,8 +32,9 @@ int main()
 
 // Enter The Number of Row: 
 // 5
-// Z Z Z Z Z 
-//       Z   
-//     Z     
-//   Z       
-// Z Z Z Z Z 
+// I I I I I 
+//     I
+//     I
+//     I
+// I I I I I 
+
