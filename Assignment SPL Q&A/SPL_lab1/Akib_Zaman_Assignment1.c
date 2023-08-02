@@ -70,26 +70,6 @@ int main()
 //  4567654
 // 567898765
 
-
-//Not asked in the question BTW
-int main()
-{
-    int num, bin = 0, binary = 0, one = 0;
-    scanf("%d", &num);
-    while (num != 0)
-    {
-        if (num % 2 == 1)
-        {
-            ++one;
-        }
-        binary = binary * 10 + num % 2;
-        num /= 2;
-    }
-    printf("%d | %d\n", binary, one);
-    return 0;
-}
-//Not asked in the question
-
 //3
 int main()
 {
@@ -146,24 +126,87 @@ int main()
 // 1345 1641
 // 1371 1421 1461 1511 1591 1601 1641
 
-//5
+// 5
 int main()
 {
-    int input, row, column, n=0;
-    scanf("%d", &input);
-    for (row = 1; row <= input; row++)
+    int n, row, column, state = 0, num = 1;
+    scanf("%d", &n);
+    if (n % 2 != 0)
     {
-        for(column=1; column<= row; column++)
+        //first part
+        for (row = 1; row <= n / 2 + 1; row++)
         {
-            printf("%d",n);
+            for (column = 1; column <= row; column++)
+            {
+                if (state == 0)
+                {
+                    printf("%d", num);
+                    ++num;
+                    if (num > n)
+                    {
+                        num = num - 2;
+                        state = 1;
+                    }
+                }
+                else
+                {
+                    printf("%d", num);
+                    --num;
+                    if (num < 1)
+                    {
+                        num = num + 2;
+                        state = 0;
+                    }
+                }
+            }
+            for (column = 1; column <= n / 2 + 1 - row; column++)
+            {
+                printf("$");
+            }
+            printf("\n");
         }
-
-        printf("\n");
-
+        //second part
+        for (row = n / 2; row >= 1; row--)
+        {
+            for (column = 1; column <= row; column++)
+            {
+                if (state == 0)
+                {
+                    printf("%d", num);
+                    ++num;
+                    if (num > n)
+                    {
+                        num = num - 2;
+                        state = 1;
+                    }
+                }
+                else
+                {
+                    printf("%d", num);
+                    --num;
+                    if (num < 1)
+                    {
+                        num = num + 2;
+                        state = 0;
+                    }
+                }
+            }
+            printf("\n");
+        }
     }
-
     return 0;
 }
+// 9
+
+// 1$$$$
+// 23$$$
+// 456$$
+// 7898$
+// 76543
+// 2123
+// 456
+// 78
+// 9
 
 //6
 int main()
@@ -192,14 +235,14 @@ int main()
 // 7
 int main()
 {
-    int num1, num2, min, max, coprime = 1;
+    int num1, num2, min, max, co_prime = 1;
     scanf("%d%d", &num1, &num2);
     if (num1 == num2 && num1 > 1)
     {
         puts("YES");
         return 0;
     }
-    else if(num1 < num2)
+    else if (num1 < num2)
     {
         max = num2;
         min = num1;
@@ -213,11 +256,11 @@ int main()
     {
         if (max % i == 0 && min % i == 0)
         {
-            coprime = 0;
+            co_prime = 0;
             break;
         }
     }
-    if (coprime == 1)
+    if (co_prime == 1)
     {
         puts("YES");
     }
@@ -238,3 +281,118 @@ int main()
 
 // 2 1
 // YES
+
+// 8
+int main()
+{
+    int n, count = 0;
+    float sum = 0;
+    scanf("%d", &n);
+    float array[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%f", &array[i]);
+        sum += array[i];
+    }
+    float avg = sum / n;
+    for (int i = 0; i < n; i++)
+    {
+        if (array[i] > avg)
+        {
+            count++;
+        }
+    }
+    printf("%d\n", count);
+    return 0;
+}
+// 5
+// 1 2 3 4 5
+// 2
+
+// 9
+int main()
+{
+    int input, even = 0, odd = 0;
+    // scanf("%d", &input);
+    input = 6;
+    if (input % 2 == 0)
+    {
+        int array[input];
+        int array_even[input / 2];
+        int array_odd[input / 2];
+        for (int i = 0; i < input; i++)
+        {
+            scanf("%d", &array[i]);
+            if (array[i] % 2 == 0)
+            {
+                array_even[even] = array[i];
+                even++;
+            }
+            else
+            {
+                array_odd[odd] = array[i];
+                odd++;
+            }
+        }
+        even = 0, odd = 0;
+        for (int i = 0; i < input; i++)
+        {
+            if (i % 2 == 0)
+            {
+                printf("%d ", array_even[even]);
+                even++;
+            }
+            else
+            {
+                printf("%d ", array_odd[odd]);
+                odd++;
+            }
+        }
+    }
+    return 0;
+}
+// 6
+// 6 8 4 3 5 7
+// 6 3 8 5 4 7
+
+// 10
+int main()
+{
+    int input, temp;
+    //scanf("%d", &input); 
+    input = 4;
+    int array[input];
+    for (int i = 0; i < input; i++)
+    {
+        scanf("%d", &array[i]);
+        if (array[i] >= 0 && array[i] < input)
+        {
+        }
+        else
+        {
+            puts("Invalid Input");
+            return 0;
+        }
+    }
+    for (int i = 0; i < input; i++)
+    {
+        for (int j = i + 1; j < input; j++)
+        {
+            if (array[i] >= array[j])
+            {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < input; i++)
+    {
+        printf("%d ", array[i]);
+    }
+    return 0;
+}
+// // 4
+// // 3 0 2 1
+
+// // 0 1 2 3
