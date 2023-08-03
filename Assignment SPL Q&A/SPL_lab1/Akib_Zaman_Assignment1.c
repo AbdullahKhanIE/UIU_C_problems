@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-//1
+// 1
 int main()
 {
     int num, temp, first_digit, last_digit, sum_factor = 0, i = 1;
@@ -13,16 +13,13 @@ int main()
         first_digit = temp % 10;
         temp = temp / 10;
     }
-    // printf("F%d\nLast%d\n", first_digit, last_digit);
     for (i = 1; i <= num; i++)
     {
         if (num % i == 0)
         {
-            // printf("%d\n", i);
             sum_factor += i;
         }
     }
-    // printf("%d\n",count);
     if ((first_digit + last_digit < 7) && (sum_factor < 2 * num))
     {
         printf("Pixie\n");
@@ -359,7 +356,7 @@ int main()
 int main()
 {
     int input, temp;
-    //scanf("%d", &input); 
+    //scanf("%d", &input);
     input = 4;
     int array[input];
     for (int i = 0; i < input; i++)
