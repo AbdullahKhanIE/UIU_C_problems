@@ -205,3 +205,43 @@ int main()
 // WELCOME to CSE, everyone
 // e
 // 6
+
+// 10
+int main()
+{
+    char str[N];
+    fgets(str, N, stdin);
+    int len = strlen(str) - 1;
+    for (int i = 0, j = len; i < len; i++, j--)
+    {
+        if (str[i] != str[j-1])
+        {
+            printf("No\n");
+            return 0;
+        }
+    }
+    printf("Yes\n");
+    return 0;
+}
+// madam
+// Yes
+
+// 11
+int main()
+{
+    char str[N];
+    int sum = 0;
+    fgets(str, N, stdin);
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] >= '1' && str[i] <= '9')
+        {
+            sum += str[i] - '0';
+        }
+    }
+    printf("%d\n", sum);
+    return 0;
+}
+// ""abc 123 7&*&*""
+// 13
+
