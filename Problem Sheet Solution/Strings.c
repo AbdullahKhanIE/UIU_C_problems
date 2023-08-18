@@ -245,3 +245,106 @@ int main()
 // ""abc 123 7&*&*""
 // 13
 
+// 12
+int main()
+{
+    char str1[N], str2[N], maxalpha[26];
+    fgets(str1, N, stdin);
+    fgets(str2, N, stdin);
+    str1[strlen(str1) - 1] = '\0';
+    str2[strlen(str2) - 1] = '\0';
+    int i, j, count = 0;
+    int len1 = strlen(str1);
+    int len2 = strlen(str2);
+    if (len1 < len2)
+    {
+        return 0;
+    }
+    for (i = 0; i <= len1 - len2; i++)
+    {
+        for (j = 0; j < len2; j++)
+        {
+            if (str1[i + j] != str2[j])
+            {
+                break;
+            }
+            if ((j == len2 - 1 && str1[i + j + 1] == ' ' && str1[i - 1] == ' ') || (j == len2 - 1 && str1[i + j + 1] == ' ' && i == 0) || (j == len2 - 1 && str1[i - 1] == ' ' && i + j + 1 == len1))
+            {
+                ++count;
+            }
+        }
+    }
+    printf("%d\n", count);
+    return 0;
+}
+// I liked the story about the sad giant
+// the
+// 2
+
+// 13
+int main()
+{
+    char str[N];
+    fgets(str, N, stdin);
+    int x = strlen(str);
+    str[x - 1] = '\0';
+    int i, j, k;
+    for (i = 0; i < x; i++)
+    {
+        for (j = i + 1; j < x; j++)
+        {
+            if (str[i] == str[j])
+            {
+                for (k = j; k < x; k++)
+                {
+                    str[k] = str[k + 1];
+                }
+            }
+        }
+    }
+    printf("%s\n", str);
+    return 0;
+}
+// My name is Andy
+// My nameisAd
+
+// 14
+int main()
+{
+    char str[N], maxalpha[26];
+    fgets(str, N, stdin);
+    for (int i = 0; str[i] != '\0'; i++)
+    {
+        if (str[i] >= 97 && str[i] <= 122)
+        {
+            str[i] = str[i] - 32;
+        }
+    }
+    for (int i = 0; i < 26; i++)
+    {
+        maxalpha[i] = 0;
+    }
+    for (int i = 0; i < strlen(str); i++)
+    {
+        if (str[i] >= 65 && str[i] <= 90)
+        {
+            int x = str[i] - 65;
+            maxalpha[x] += 1;
+        }
+    }
+    int max = maxalpha[0], count = 0;
+    for (int i = 1; i < 26; i++)
+    {
+        if (max < maxalpha[i])
+        {
+            max = maxalpha[i];
+            count = i;
+        }
+    }
+    printf("%c\n", count+65);
+    return 0;
+}
+// Welcome to CSE
+// E
+
+// 15
