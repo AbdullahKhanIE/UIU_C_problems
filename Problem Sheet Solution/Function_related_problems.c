@@ -349,3 +349,4 @@ int Min(int array[], int n)
     }
     return min;
 }
+
